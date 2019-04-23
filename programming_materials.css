@@ -58,6 +58,54 @@ nav ul li a:hover
     color: #fff1ff;
 }
 
+.main-container {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin:0;
+    padding: 0;
+    background: white;
+    
+}
+.eureka-1 {
+    background: rgb(168, 175, 67);
+    color: black;
+}
+.main-container h3 {
+    text-align: center;
+}
+
+.eureka-1-content {
+    display: flex;
+}
+
+.obstacle {
+    width: 50%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media (max-width:1000px){
     header {
         margin: 20px;
@@ -96,6 +144,15 @@ nav ul li a:hover
     }
     nav.active ul li a {
         margin: 0;
+    }
+
+    .eureka-1-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .obstacle {
+        width: 100%;
     }
 }
 
