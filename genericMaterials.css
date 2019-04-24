@@ -1,0 +1,192 @@
+/* Core Styles */
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #333;
+    color: #fff;
+    font-size: 1.1em;
+    line-height: 1.5;
+    text-align: center;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+h1, h2, h3 {
+    margin: 0;
+    padding: 1em 0;
+}
+
+p {
+    margin: 0;
+    padding: 1em 0;
+}
+
+.btn {
+    display: inline-block;
+    background: #333;
+    color: #fff;
+    text-decoration: none;
+    padding: 1em 2em;
+    border: 1px solid #909;
+    margin: .5em 0;
+}
+
+.btn:hover{
+    background: #eaeaea;
+    color: #333;
+}
+
+/* Header Showcase */
+
+#showcase{
+    min-height: 450px;
+    color: #fff;
+    text-align: center;
+}
+
+#showcase .bg-image {
+    position: absolute;
+    background: #333 url('https://images.pexels.com/photos/1433052/pexels-photo-1433052.jpeg?cs=srgb&dl=aerial-shot-beach-bird-s-eye-view-1433052.jpg&fm=jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 450px;
+   z-index: -1;
+   opacity: 0.4;
+}
+
+#showcase h1 {
+    padding-top: 100px;
+    padding-bottom: 1.5em;
+}
+
+#showcase .content-wrap,
+#section-a .content-wrap{
+    padding: 0 1.5em;
+}
+/* Section A */
+
+#section-a {
+    background: #eaeaea;
+    color: #333;
+    padding-bottom: 2em;
+}
+
+/* section-B */
+
+#section-b {
+    padding: 2em 1em 1em;
+}
+
+#section-b ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#section-b li{
+    margin-bottom: 1em;
+    background: #fff;
+    color: #333;
+}
+
+.card-content{
+    padding: 1.5em;
+}
+
+/* Section C */
+
+#section-c {
+    background: rgb(211, 150, 150);
+    color: #333;
+    padding: 2em;
+}
+
+/* Section D */
+
+#section-d {
+    background: rgb(134, 121, 214);
+    color: #333;
+    padding: 2em;
+}
+/* Section E */
+
+#section-e {
+    background: rgb(201, 149, 176);
+    color: #333;
+    padding: 2em;
+}
+
+/* Section F */
+
+#section-f {
+    background: rgb(29, 124, 80);
+    color: #333;
+    padding: 2em;
+}
+
+/* Footer */
+
+.footer-container {
+    padding: 2em;
+    background: #000;
+    color: #fff;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    }
+
+
+/* Media Queries */
+@media(min-width: 1000px) {
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr repeat(2, minmax(auto,30em)) 1fr;
+    }
+
+    #section-a .content-text1,
+    .content-text {
+        columns: 2;
+        column-gap: 2em;
+    }
+
+    #section-a .content-text1 p,
+    #section-c .content-text p {
+        padding-top: 0;
+    }
+
+    .content-wrap,
+    #section-b ul {
+        grid-column: 2/4;
+    }
+
+ 
+    #section-b ul {
+        display: flex;
+    }
+
+    #section-b li {
+        width: 100%;
+    }
+
+    #section-b div img {
+        height: 30em;
+    }
+    .footer-container {
+        padding: 2em;
+        background: #000;
+        color: #fff;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+       
+        }
+
+    }
+}

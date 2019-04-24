@@ -1,0 +1,106 @@
+﻿*{
+    box-sizing: border-box;
+}
+
+/* styling the body*/
+body{
+    margin: 0;
+}
+
+/* styling the header*/
+.header{
+    /* display: flex; */
+    padding: 20px;
+    background-color: rgb(240, 142, 14);
+    font-size: 50px;
+    /* justify-content: center; */
+    grid-area: header;
+    text-align: center;
+    
+}
+
+/* set up nav*/
+.nav {
+    padding: 10px;
+    background-color: lightcoral;
+    grid-area: navigation;
+    }
+    /*set nav hover*/
+.nav a:hover{
+    background-color: red;
+
+}
+
+/* set up main*/
+/* dispaly: flex, seting the wrap to contain the content and aside parts*/
+
+
+.main{
+    display: grid;
+    margin: 0 5%;
+
+    grid-template-columns: 20% 40% 40%;
+    grid-template-areas:
+    "header  header  header"
+    "navigation navigation navigation"
+    "sidebar content content"
+    "footer  footer  footer";
+}
+
+/* set up content, coloring it to differ from aside part*/
+.content {
+    padding: 20px;
+    background-color: rgb(151, 151, 155);
+    text-align: center;
+/* margin:0 20%; */
+    grid-area: content;
+    position: relative;
+}
+
+/* setup aside-set the wrap,then the values*/
+.aside{
+        /* display: flex;
+        flex-flow: row ;
+        flex-wrap: wrap; */
+    grid-area:sidebar;
+    padding: 20px;
+    background-color: green;
+    text-align: center;
+}
+
+
+/* .aside{ padding: 10px;
+    background-color: green;
+    text-align: center;
+
+} */
+
+/* set footer, locate the footer to grid-area firstly.*/
+.footer{
+    grid-area: footer;
+    padding: 20px;
+    background-color: yellowgreen;
+    text-align: center;
+    
+
+}
+
+/* responsive code, here is desktop first , it is possible to design mobile phones first */
+@media only screen and (max-width: 1000px) {
+    /* For mobile phones: */
+    .head, .nav, .content, .aside, .footer  {
+      width: 100%;
+    }
+    .main{
+        display: grid;
+        margin: 0 5%;
+    
+        grid-template-columns:100%;
+        grid-template-areas:
+        "header "
+        "navigation"
+        "sidebar"
+        "content"
+        "footer";
+    }
+  }
