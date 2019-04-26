@@ -8,7 +8,49 @@
     <body>
         <!-- Header Showcase, using emmet -->
         <!-- Header#showcase.grid -->
-        <header id="showcase" class="grid">
+        <!-- ---------------------------- -->
+        <header>
+                
+                 <a href="#" class="logo">ODS</a>           
+                 <div class="menu-toggle">
+                    <p>Menu</p>    
+                 </div>
+                 <nav class="nav">
+                   <ul>
+                         <li>
+                             <a 
+                             href="http://myy.haaga-helia.fi/~bgh252/ODS/FinalProject/studyingOnSoftwarEngineering.htm" >Home</a></li>
+     
+                          <li>
+                             <a class="active" href="https://myy.haaga-helia.fi/~bgh252/ODS/FinalProject/genericMaterials.1.html">Generic materials</a></li>
+                    
+                         <li>
+                           <a href="http://myy.haaga-helia.fi/~bgh252/ODS/FinalProject/programmingMaterials.html">Programming marterials</a></li>
+                   
+                         <li>                  
+                             <a href="">Future study</a></li>           
+                         <li>        
+                              <a href="">Job Hunting</a></li>
+                         <li>               
+                             <a href="">Having fun</a></li>
+                  </ul>
+              </nav>
+              <div class="clearfix"></div>
+         </header>
+         <!-- JQuiry -->
+         <script src="https://code.jquery.com/jquery-3.4.0.js"
+         integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo="
+         crossorigin="anonymous"></script>
+         <script type="text/javascript">
+         $(document).ready(function(){
+             $('.menu-toggle').click(function(){
+                 $('.menu-toggle').toggleClass('active')
+                 $('nav ').toggleClass('active')
+             })
+         })
+         </script>
+     <!-----------------------------  -->
+        <div id="showcase" class="grid">
             <div class="bg-image"></div>
             <div class="content-wrap">
             <h1>The imperative skill materials </h1>
@@ -16,7 +58,7 @@
                  Quasi sed commodi sunt, voluptatem dolor fugit laborum expedita voluptatum placeat doloribus.</p>
             <a href="#section-a" class="btn">Read More</a>
         </div>
-        </header>
+        </div>
         <!-- Main Area -->
         <main id="main">
             <!-- Section A -->
