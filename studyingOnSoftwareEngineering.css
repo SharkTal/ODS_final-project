@@ -84,13 +84,14 @@ nav ul li a:hover
 /* cards setting */
 
 .card-container{
-    display: flex;
+   display: flex;
    flex-direction: column;
+  justify-content: space-between;
 }
 
 .card {
     box-shadow: 0 4px 8px 0 rgba(10, 10, 10, 0.2);
-    max-width: 300px;
+    /* max-width: 300px; */
     margin: auto;
     text-align: center;
     font-family: arial;
@@ -133,12 +134,15 @@ nav ul li a:hover
     grid-area:sidebar;
     padding: 20px;
     text-align: center;
+    box-shadow: 0 5px 20px 0 rgba(226, 159, 159, 0.2);
+    
 }
 
 .aside a {
     text-decoration: none;
     background: green;
     color: white;
+    width: 100%;
 }
 /* set footer, locate the footer to grid-area firstly.*/
 footer{
@@ -219,4 +223,17 @@ footer{
         margin-bottom: 0;
     }
 
+  }
+
+  @media(min-width:1000px){
+      .card-container{
+          display: flex;
+          flex-direction: row;
+      }
+      .card {
+        max-width: 350px;
+        height: auto;     
+      }
+
+     
   }

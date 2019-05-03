@@ -5,6 +5,12 @@ body{
     
 }
 
+.footer {
+    padding: 5px;
+}
+
+
+
 @media(max-width:1000px){
 .wrapper{
     display: grid;
@@ -22,7 +28,7 @@ body{
     position: relative;
     background:white;
     /* box-sizing: border-box; */
-    box-shadow: 0 2px 5px rgba(0,0,0,.2);
+    box-shadow: 0 2px 5px rgba(0,0,0,.35);
     background: rgb(31, 29, 29);
 }
 
@@ -65,7 +71,6 @@ body{
 .menu-toggle.active:before{
     content: '';
 }
-
 
 
 
