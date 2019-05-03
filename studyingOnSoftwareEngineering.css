@@ -1,106 +1,201 @@
-﻿*{
-    box-sizing: border-box;
-}
+﻿
 
 /* styling the body*/
-body{
-    margin: 0;
+html, body {
+    width: 100% ;
+    height: 100% ;
+   
+    margin: 0px ;
+}
+
+
+.main{
+    display: grid;
+    grid-template-columns: 10% 45% 45%;
+    grid-template-areas:
+                "header  header  header" 
+                "navigation navigation navigation" 
+                "sidebar content content"
+                "footer  footer  footer";
 }
 
 /* styling the header*/
 .header{
-    /* display: flex; */
-    padding: 20px;
-    background-color: rgb(240, 142, 14);
-    font-size: 50px;
-    /* justify-content: center; */
     grid-area: header;
+    padding: 10px;
+    background-color: black;
     text-align: center;
+    color: white;
+    width: 100%;
     
 }
 
 /* set up nav*/
-.nav {
-    padding: 10px;
-    background-color: lightcoral;
+nav{
     grid-area: navigation;
-    }
-    /*set nav hover*/
-.nav a:hover{
-    background-color: red;
+    display: flex;
+    justify-content: center;
+    background:lightgray;
+}  
 
+nav ul {
+    margin: 0;
+    padding: 0;
+    display:inline-block;
+    display: flex;
+    
+
+}
+
+nav ul li {
+    list-style: none;
+   
+}
+
+nav ul li a {
+    float: left;
+    margin: 10px 0;
+    padding: 10px 20px;
+    text-decoration: none;
+    color:#262626;
+}
+
+nav ul li a.active,
+nav ul li a:hover
+{
+    background: green;
+    color: #fff1ff;
 }
 
 /* set up main*/
 /* dispaly: flex, seting the wrap to contain the content and aside parts*/
 
 
-.main{
-    display: grid;
-    margin: 0 5%;
-
-    grid-template-columns: 20% 40% 40%;
-    grid-template-areas:
-    "header  header  header"
-    "navigation navigation navigation"
-    "sidebar content content"
-    "footer  footer  footer";
-}
 
 /* set up content, coloring it to differ from aside part*/
 .content {
-    padding: 20px;
-    background-color: rgb(151, 151, 155);
-    text-align: center;
-/* margin:0 20%; */
     grid-area: content;
-    position: relative;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+   
 }
+
+/* cards setting */
+
+.card-container{
+    display: flex;
+   flex-direction: column;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(10, 10, 10, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+  }
+
+  .card img{
+      width: 100%;
+  }
+
+  .card button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    background-color:green;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+
+
+  .card button:hover {
+    /* opacity: 0.5; */
+    background: rgb(0, 140, 255);
+  }
+
+ .card button a{
+     text-decoration: none;
+    color: white;
+ }
+
+
+
 
 /* setup aside-set the wrap,then the values*/
 .aside{
-        /* display: flex;
-        flex-flow: row ;
-        flex-wrap: wrap; */
+      
     grid-area:sidebar;
     padding: 20px;
-    background-color: green;
     text-align: center;
 }
 
-
-/* .aside{ padding: 10px;
-    background-color: green;
-    text-align: center;
-
-} */
-
+.aside a {
+    text-decoration: none;
+    background: green;
+    color: white;
+}
 /* set footer, locate the footer to grid-area firstly.*/
-.footer{
+footer{
     grid-area: footer;
-    padding: 20px;
-    background-color: yellowgreen;
-    text-align: center;
+    background: black;
+    color: white;
+    margin-bottom: -80px;
     
-
 }
+
+.footer-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.footer-container p{
+    padding: 10px;
+}
+
+.footer-container a {
+    padding: 2px;
+}
+
 
 /* responsive code, here is desktop first , it is possible to design mobile phones first */
 @media only screen and (max-width: 1000px) {
     /* For mobile phones: */
-    .head, .nav, .content, .aside, .footer  {
+    /* .head, .nav, .content, .aside, .footer  {
       width: 100%;
-    }
+    } */
     .main{
         display: grid;
-        margin: 0 5%;
-    
         grid-template-columns:100%;
         grid-template-areas:
         "header "
         "navigation"
-        "sidebar"
         "content"
+        "sidebar"
         "footer";
     }
+
+  
+    .nav ul {
+        display:flex;
+        flex-direction: column;
+        
+    }
+    nav ul li a.active,
+    nav ul li a:hover
+    {
+        background: green;
+        color: #fff1ff;
+    }
+
+    .card{
+        width: 100%;
+        margin-top: 20px;
+    }
+
   }

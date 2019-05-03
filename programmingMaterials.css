@@ -198,23 +198,15 @@ div.eureka-moments {
     width: 50%;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.footer-container{
+    display: flex;
+   justify-content: center;
+   align-items: center;
+   color: white;
+}
+.footer-container p {
+        padding: 10px;
+}
 
 
 
@@ -319,10 +311,13 @@ div.eureka-moments {
     }
 
    
+   
 }
 
 @media (min-width:1000px){
     .menu-toggle {
         display: none;
     }
+
+   
 }
