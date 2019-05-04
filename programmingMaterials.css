@@ -204,8 +204,8 @@ div.eureka-moments {
    align-items: center;
    color: white;
 }
-.footer-container p {
-        padding: 10px;
+.footer-container p,a {
+        padding: 5px;
 }
 
 

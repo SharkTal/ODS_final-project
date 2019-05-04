@@ -83,16 +83,16 @@ nav ul li a:hover
 
 /* cards setting */
 
-.card-container{
+/* .card-container{
    display: flex;
    flex-direction: column;
   justify-content: space-between;
-}
+} */
 
 .card {
     box-shadow: 0 4px 8px 0 rgba(10, 10, 10, 0.2);
     /* max-width: 300px; */
-    margin: auto;
+    margin: 0 auto;
     text-align: center;
     font-family: arial;
   }
@@ -213,7 +213,13 @@ footer{
         color: #fff1ff;
         max-width: 100%;
     }
-
+    
+    .card-container{
+        display: flex;
+        flex-direction: column;
+    justify-content: space-between;
+    }
+ 
     .card{
         width: 100%;
         margin-top: 20px;
@@ -227,12 +233,12 @@ footer{
 
   @media(min-width:1000px){
       .card-container{
-          display: flex;
-          flex-direction: row;
-      }
+          display:grid;
+          grid-template-columns: 1fr 1fr 1fr;
+        }
       .card {
-        max-width: 350px;
-        height: auto;     
+       max-width: 350px;
+    
       }
 
      

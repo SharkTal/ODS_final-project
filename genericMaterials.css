@@ -198,6 +198,9 @@ nav ul li a:hover
     align-items: center;
     }
 
+    .footer {
+        padding: 5px;
+    }
 
 /* Media Queries */
 @media(min-width: 1000px) {
@@ -245,9 +248,9 @@ nav ul li a:hover
         display:flex;
         justify-content: center;
         align-content: center;
-       
         }
 
+       
 
 }
 
