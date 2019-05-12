@@ -6,6 +6,29 @@ body {
     width: 100%;
     
 }
+/* section-2 common set for desktop and mobile */
+
+
+.main-wrapper a{
+    text-decoration: none;
+    color:black;
+    box-shadow: 0 5px 7px 0 gray;
+    margin-top: 20px;
+}
+
+.main-wrapper  img{
+    max-width: 400px;
+}
+
+
+
+
+
+
+
+
+
+
 
 /* ---------footer */
 /* ------------------------- */
@@ -39,11 +62,9 @@ footer{
 
 .body-container{
     display: grid;
-    
     grid-template-areas: 
                     "header"
-                    "hero "
-                    "main "
+                    "main"
                     "footer";
 }
 
@@ -141,101 +162,27 @@ nav ul li a:hover
     color: #fff1ff;
 }
 
-/* Section 2----------------------- */
+/* section 2 main---------------------- */
 
-.hero-image{
-    grid-area: hero;
-    position: relative;
-    background:black url("https://images.pexels.com/photos/164529/pexels-photo-164529.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260;");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 200px;
-    z-index: -1;
-    opacity: 0.9;
-    margin-bottom: 20px;
-}
-
-.hero-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    overflow: hidden;
-    font-size: 50;
-    text-transform: uppercase;
-    color:white;
-    text-align: center; 
-    width: 100%;
-  }
-
-  .hero-text h2 {
-    font-size: 40px;
-    letter-spacing: 0.1em;
-}
-
-.hero-text h2 span {
-    border: 10px solid white;
-    padding: 6px 14px;
-    display: inline-block;
-}
-
-.des {
-    margin: 20px;
-    display: block;
-    font-size: 30px;
-    text-shadow: 0 0 10px black;
-}
-
-
-
-/* Section 3-------------------------- */
-/* ------------------------ */
-
-.main{
+.main-wrapper{
     grid-area: main;
-}
-
-.main .card-container{
-    background: white;
-    box-shadow: 1px 40px 70px rgb(46,45,41,0.35);
-    margin: 0 auto;
-    max-width: 400px;
     display: flex;
     flex-direction: column;
-    transition-timing-function: ease-in-out;
-    text-decoration: none;
-    color: #2e2d29;
-    margin-top: 30px;
 }
-
-.main .card-container .card img{
-    display: block;
-    max-width: 100%;
-    height: auto;
-    margin: 0;
-}
-
-/* Section 5------------------------*/
-
+/* Section 3 footer */
 .footer{
     grid-area: footer;
 }
-
 }
 
 
-/* ------------------- */
-/* --Desktop --------------*/
 
 @media(min-width:1000px){
     .body-container{
         display: grid;
-        grid-template-columns: 5% 1fr 5%;
+        grid-template-columns: 20% 1fr 20%;
         grid-template-areas: 
                         "header header header"
-                        "hero hero hero"
                         ". main ."
                         "footer footer footer"
     }
@@ -301,98 +248,24 @@ nav ul li a:hover
     color: #fff1ff;
 }
 
+/* section-2 main */
 
-/* Hero-------------------------- */
-
-
-.hero-image{
-    grid-area: hero;
-    position: relative;
-    background:black url("https://images.pexels.com/photos/164529/pexels-photo-164529.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260;");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 200px;
-    z-index: -1;
-    opacity: 0.9;
-    margin-bottom: 20px;
-}
-
-.hero-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    overflow: hidden;
-    font-size: 50;
-    text-transform: uppercase;
-    color:white;
-    text-align: center; 
-    width: 100%;
-  }
-
-  .hero-text h2 {
-    font-size: 40px;
-    letter-spacing: 0.1em;
-}
-
-.hero-text h2 span {
-    border: 10px solid white;
-    padding: 6px 14px;
-    display: inline-block;
-}
-
-.des {
-    margin: 20px;
-    display: block;
-    font-size: 30px;
-    text-shadow: 0 0 10px black;
-}
-
-/*  Main---------------------------- */
-    .main{
-        grid-area: main;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-column-gap: 20px;
-        grid-row-gap: 20px;
-
-    }
-
-    .main .card-container{
-        background: white;
-        box-shadow: 1px 40px 70px rgb(46,45,41,0.35);
-        margin: 0 auto;
-        max-width: 400px;
-        display: flex;
-        flex-direction: column;
-        transition-timing-function: ease-in-out;
-        text-decoration: none;
-        color: #2e2d29;
-        margin-top: 30px;
-    }
+.main-wrapper{
+    grid-area: main;
     
-    .main .card-container .card img{
-        display: block;
-        max-width: 100%;
-        height: auto;
-        margin: 0;
-    }
+}
 
-    .main a:hover{
-        background-color: green;
-    }
+.card-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+}
 
 
-
-
-
-
-
-
-
-
+.card-wrapper a:hover{
+    background: green;
+}
 
 
 
